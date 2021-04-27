@@ -1,14 +1,10 @@
 from flask import render_template ,request,redirect, url_for
 from . import auth
 from .forms import RegistrationForm, LoginForm
-from .models import User
+from ..models import User
 from ..import db
 from flask_login import login_user, login_required, logout_user
 
-@auth.route('/login')
-def login():
-    return
-    render_template('auth/login.html')
 
 @auth.route('/register',methods = ["GET","POST"])
 def register():
